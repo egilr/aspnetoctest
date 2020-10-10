@@ -21,11 +21,6 @@ namespace aspnetoctest
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();
-
-
                 });
-
-
-
     }
 }
