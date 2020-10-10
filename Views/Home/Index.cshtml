@@ -9,6 +9,8 @@
     <h3>Environment from .s2i/environment : @ViewBag.ENV</h3>
     <h3>Environment from oc new-app -e ...: @ViewBag.ENVTEST</h3>
     <hr />
-    <h3>secret1 : @ViewBag.SECRET1</h3>
-    <h3>secret2 : @ViewBag.SECRET2</h3>
+    <h3>From Secrets : @ViewBag.SECRET1</h3>
+    <h3>From Secrets : @ViewBag.SECRET2</h3>
+    <hr />
+    <h3>From configmap: @ViewBag.ERLKEY1</h3>
 </div>

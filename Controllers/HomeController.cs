@@ -28,6 +28,7 @@ namespace aspnetoctest.Controllers
             ViewBag.ENVTEST = Environment.GetEnvironmentVariable("ENVTEST");
             ViewBag.SECRET1 = _configuration.GetValue<string>("secret1");
             ViewBag.SECRET2 = _configuration.GetValue<string>("secret2");
+            ViewBag.ERLKEY1 = _configuration.GetValue<string>("erlkey1");
 
             return View();
         }
