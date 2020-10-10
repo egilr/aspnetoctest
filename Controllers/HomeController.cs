@@ -21,6 +21,7 @@ namespace aspnetoctest.Controllers
         public IActionResult Index()
         {
             ViewBag.ENV = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT");
+            ViewBag.ENVTEST = Environment.GetEnvironmentVariable("ENVTEST");
             return View();
         }
 
