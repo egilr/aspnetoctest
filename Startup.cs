@@ -32,6 +32,10 @@ namespace aspnetoctest
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+
+                
+
+
             }
             else
             {
