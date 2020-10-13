@@ -8,6 +8,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <_ContentIncludedByDefault Remove=".s2i\environment" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Content Include=".s2i\environment" />
   </ItemGroup>
 

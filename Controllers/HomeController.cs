@@ -24,7 +24,8 @@ namespace aspnetoctest.Controllers
 
         public IActionResult Index()
         {
-            ViewBag.ENV = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT");
+            ViewBag.ASPNETCORE_ENVIRONMENT = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT");
+            ViewBag.S2 = Environment.GetEnvironmentVariable("S2");
             ViewBag.ENVTEST = Environment.GetEnvironmentVariable("ENVTEST");
             ViewBag.SECRET1 = _configuration.GetValue<string>("secret1");
             ViewBag.SECRET2 = _configuration.GetValue<string>("secret2");

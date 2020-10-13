@@ -5,8 +5,10 @@
 <div class="text-center">
     <h1 class="display-4">Welcome Openshift :)</h1>
     <hr />
-    <h3>Environment from .s2i/environment : @ViewBag.ENV</h3>
-    <h3>Environment from oc new-app -e ...: @ViewBag.ENVTEST</h3>
+    <h3>ASPNETCORE_ENVIRONMENT : @ViewBag.ASPNETCORE_ENVIRONMENT</h3>
+    <hr />
+    <h3>From .s2i/environment : @ViewBag.S2</h3>
+    <h3>From oc new-app -e ...: @ViewBag.ENVTEST</h3>
     <hr />
     <h3>From Secrets : @ViewBag.SECRET1</h3>
     <h3>From Secrets : @ViewBag.SECRET2</h3>
@@ -14,6 +16,6 @@
     <h3>From configmap: @ViewBag.ERLKEY1</h3>
 
     <hr />
-    <h3>Version 1.2.2</h3>
+    <h3>Version 1.2.3</h3>
 
 </div>
