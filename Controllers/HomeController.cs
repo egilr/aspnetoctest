@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using aspnetoctest.Models;
 using Microsoft.Extensions.Configuration;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.Hosting;
 
 namespace aspnetoctest.Controllers
 {
@@ -15,15 +17,19 @@ namespace aspnetoctest.Controllers
         private readonly ILogger<HomeController> _logger;
 
         private readonly IConfiguration _configuration;
+        private readonly IWebHostEnvironment _env;
 
-        public HomeController(ILogger<HomeController> logger,IConfiguration configuration)
+        public HomeController(ILogger<HomeController> logger,IConfiguration configuration, IWebHostEnvironment env)
         {
             _logger = logger;
             _configuration = configuration;
+            _env = env;
         }
 
         public IActionResult Index()
         {
+
+            ViewBag.IsDevelopment = _env.IsDevelopment().ToString();
             ViewBag.ASPNETCORE_ENVIRONMENT = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT");
             ViewBag.S2 = Environment.GetEnvironmentVariable("S2");
             ViewBag.ENVTEST = Environment.GetEnvironmentVariable("ENVTEST");

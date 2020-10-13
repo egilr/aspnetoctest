@@ -1,1 +1,2 @@
 ﻿S2 = "Gjedde"
+ASPNETCORE_ENVIRONMENT = "Development"
